@@ -56,6 +56,7 @@ for i = 1:size(R,1)
     end
 end
 
+%%  OUTPUT
 disp('Routh table: ')
 disp(R);
 
