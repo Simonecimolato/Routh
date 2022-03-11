@@ -6,13 +6,12 @@ clear
 clc
 
 %%  INPUT DATA
-coeffs = [1 5 6 30 8 9]; % in order, include 0s
-degree = length(coeffs)-1;
+coeffs = [6 10 21 4]; % in order, include 0s
 
 %%  ROUTH TABLE CONSTRUCTION
-R = zeros(degree+1,ceil((degree+1)/2)+1);
+R = zeros(length(coeffs)-1+1,ceil((length(coeffs)-1+1)/2)+1);
 
-R(:,1) = degree:-1:0;
+R(:,1) = length(coeffs)-1:-1:0;
 R(1,2:end) = coeffs(1:2:end);
 
 %checking if length(coeffs) is even or odd
