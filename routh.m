@@ -6,7 +6,7 @@ clear
 clc
 
 %%  INPUT DATA
-coeffs = [6 10 21 4]; % in order, include 0s
+coeffs = [8 10 21 4 9]; % in order, include 0s
 
 %%  ROUTH TABLE CONSTRUCTION
 R = zeros(length(coeffs)-1+1,ceil((length(coeffs)-1+1)/2)+1);
@@ -43,7 +43,7 @@ for i = 3:size(R,1)
     end
 end
 
-%removing first column 
+%removing first and last column 
 R = R(1:end,2:end-1);
 
 %checking if a row is NaN or all zeros and only saving previous rows in
