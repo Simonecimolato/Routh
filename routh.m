@@ -6,7 +6,7 @@ clear
 clc
 
 %%  INPUT DATA
-coeffs = [1 3 4 2]; % in order, include 0s, [1 2 2 4 1 2] says it's stable but it's not, it has repeated poles on the imaginari axis
+coeffs = [1 3 4 2]; % in order, include 0s, [1 2 2 4 1 2] says it's stable but it's not, it has repeated poles on the imaginary axis
 
 %%  ROUTH TABLE CONSTRUCTION
 R = zeros(length(coeffs)-1+1,ceil((length(coeffs)-1+1)/2)+1);
